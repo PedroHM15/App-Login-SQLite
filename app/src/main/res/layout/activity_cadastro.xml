@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Cadastro">
+
+    <EditText
+        android:id="@+id/nome_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint="Nome:"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/senha_cadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idade_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint="Idade:"
+        android:inputType="number"
+        android:singleLine="true"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/senha_cadastro" />
+
+    <EditText
+        android:id="@+id/senha_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint="Senha:"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/idade_cadastro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_cadastro" />
+
+    <Button
+        android:id="@+id/btn_cad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="19dp"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_voltar"
+        app:layout_constraintTop_toBottomOf="@+id/idade_cadastro" />
+
+    <Button
+        android:id="@+id/btn_voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:onClick="voltar"
+        android:text="Voltar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_cad"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cad"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
